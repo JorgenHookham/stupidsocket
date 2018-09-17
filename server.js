@@ -9,7 +9,8 @@ const server = express()
 	.use(bodyParser.json())
 	.post('/broadcast', (req, res) => {
 		console.log('Accepted request');
-		console.log(req, req.body, req.header)
+		console.log('HEADERS', req.headers)
+		console.log('BODY', req.body)
 		res.send('OK');
 		console.log('Request complete');
 	})
