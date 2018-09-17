@@ -11,6 +11,10 @@ const server = express()
 		broadcast(req.body);
 		res.send('OK');
 	})
+	.get('/broadcast', (req, res) => {
+		broadcast(req.body);
+		res.send('OK');
+	})
 	.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 function broadcast (data) {
